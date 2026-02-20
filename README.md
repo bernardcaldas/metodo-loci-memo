@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Memorix v3
 
-## Getting Started
+Sistema de Codificacao Visual para Senhas - Transforme senhas complexas em historias memoraveis.
 
-First, run the development server:
+## Como Funciona
+
+O Memorix usa a tecnica do **Palacio Mental** (Method of Loci) para transformar senhas em imagens vivas e historias faceis de lembrar.
+
+### Sistema de Codificacao
+
+A senha e dividida em blocos de 3 caracteres. Cada caractere vira uma imagem:
+
+| Tipo | Regra | Exemplo |
+|------|-------|---------|
+| **Letras** | Maiuscula = Gigante / Minuscula = Pequeno | `A` = Aguia gigante, `a` = aguia pequena |
+| **Numeros** | Cada numero vira um objeto | `1` = Vela, `2` = Cisne, `3` = Tridente |
+| **Simbolos** | Classificados por categoria | `!` = Explosao, `@` = Redemoinho, `$` = Chuva de dinheiro |
+
+### Palacio Mental
+
+Os blocos sao distribuidos em 5 locais fixos do seu palacio mental:
+
+1. **Sofa** - Primeiro bloco
+2. **TV** - Segundo bloco
+3. **Mesa** - Terceiro bloco
+4. **Porta** - Quarto bloco
+5. **Cozinha** - Quinto bloco (repete se necessario)
+
+### Exemplo Pratico
+
+Senha: `Ab3!xY`
+
+**Bloco 1 (Sofa):** Aguia gigante com baleia pequena segurando Tridente. Explosao!
+
+**Bloco 2 (TV):** Tesoura pequena com Yeti gigante!
+
+Visualize: *No sofa, uma aguia gigante carrega uma baleia pequena que segura um tridente, de repente acontece uma explosao! Na TV, uma tesoura pequena esta com um yeti gigante.*
+
+## Instalacao
+
+```bash
+npm install
+```
+
+## Executar
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tecnologias
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js 16](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
 
-## Learn More
+## Estrutura do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+├── lib/
+│   ├── data.ts        # Tabelas de codificacao
+│   ├── parser.ts      # Logica de parsing
+│   └── useMemorix.ts  # Hook de estado
+├── components/
+│   ├── Header.tsx
+│   ├── PasswordInput.tsx
+│   ├── Preview.tsx
+│   ├── BlocksSection.tsx
+│   ├── StorySection.tsx
+│   └── Tables.tsx
+└── page.tsx
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Proximos Passos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Estamos trabalhando em novas funcionalidades:
 
-## Deploy on Vercel
+- **Integracao com IA** - Geracao de historias mais ricas e personalizadas usando modelos de linguagem
+- **Novas funcionalidades** - Em breve anunciaremos mais recursos para melhorar sua experiencia
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feito com carinho para ajudar voce a nunca mais esquecer suas senhas.
