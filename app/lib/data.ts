@@ -23,7 +23,7 @@ export const LETTERS: Record<string, string> = {
   V: "Vulcao",
   W: "Mago",
   X: "Tesoura",
-  Y: "Yeti",
+  Y: "Yoshi",
   Z: "Zumbi",
 };
 
