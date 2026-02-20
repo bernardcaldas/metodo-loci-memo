@@ -6,6 +6,8 @@ Sistema de Codificacao Visual para Senhas - Transforme senhas complexas em histo
 
 O Memorix usa a tecnica do **Palacio Mental** (Method of Loci) para transformar senhas em imagens vivas e historias faceis de lembrar.
 
+O Method of Loci, tambem conhecido como Palacio da Memoria, e uma tecnica milenar com evidencias na Roma Antiga, onde oradores como Cicero a utilizavam para memorizar longos discursos. Hoje, esse metodo e amplamente empregado em competicoes mundiais de memorizacao, permitindo que campeoes memorizem sequencias de milhares de digitos, cartas e outros dados com impressionante precisao.
+
 ### Sistema de Codificacao
 
 A senha e dividida em blocos de 3 caracteres. Cada caractere vira uma imagem:
